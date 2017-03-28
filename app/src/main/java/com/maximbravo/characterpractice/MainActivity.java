@@ -49,8 +49,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 final TextView message = (TextView) findViewById(R.id.message);
                 WordExtractor w = new WordExtractor(getApplicationContext());
-                w.extractWords();
-                message.setText(w.getHsk1AsString());
+                w.extractWords(1);
+                message.setText(w.getHskLevelAsString(1));
             }
         });
     }
